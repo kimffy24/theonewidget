@@ -1,5 +1,11 @@
 command: """
-    network-throughput.widget/lib/network.sh
+if [ ! -e network-throughput.widget/lib/network.sh ]; then
+  "$PWD/TheOneWidget.widget/network-throughput.widget/lib/network.sh"
+else
+  "$PWD/network-throughput.widget/lib/network.sh"
+fi
+
+    
 """
 refreshFrequency: 2000
 
@@ -11,7 +17,7 @@ style: """
     widget-align = left
 
     // Position this where you want
-    top 328px
+    top 190px
     left 10px
 
     // Statistics text settings

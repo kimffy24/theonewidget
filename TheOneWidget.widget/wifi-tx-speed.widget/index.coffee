@@ -13,8 +13,8 @@ refreshFrequency: 10000
 # Adjust the style settings to suit. I've set the position to be just below the WiFi icon in my menu bar.
 
 style: """
-  top: 442px
-  left: 222px
+  top: 612px
+  left: 226px
   color: #7dff7d
   font-family: San Francisco Display
 
@@ -47,10 +47,15 @@ style: """
     width: 24px
     margin-bottom: -3px
       
+ a.tx_speed
+    white-space: nowrap
+    position: relative;
+    left: 5px;
+    top: 2px;
 """
 
 render: -> """
-  <div><img src="wifi-tx-speed.widget/icon48.png">
+  <div><img src="TheOneWidget.widget/wifi-tx-speed.widget/icon48.png">
    <a class='tx_speed'></a></div>
 """
 

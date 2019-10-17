@@ -13,8 +13,8 @@ refreshFrequency: 10000
 # Adjust the style settings to suit. I've set the position to be just below the WiFi icon in my menu bar.
 
 style: """
-  top: 403px
-  left: 222px
+  top: 656px
+  left: 226px
   color: #7dff7d
   font-family: San Francisco Display
 
@@ -28,6 +28,7 @@ style: """
     font-weight: 400
     width: 96px
     padding: 6px 6px 6px 6px
+    position: relative
 
     &:after
       content: 'WiFi SSID'
@@ -44,11 +45,17 @@ style: """
     height: 24px
     width: 24px
     margin-bottom: -3px
+
+ a.ssid
+    white-space: nowrap
+    position: absolute
+    top: 18px
+    left: 38px
       
 """
 
 render: -> """
-  <div><img src="wifi-ssid.widget/icon48.png">
+  <div><img src="TheOneWidget.widget/wifi-ssid.widget/icon48.png">
    <a class='ssid'></a></div>
 """
 

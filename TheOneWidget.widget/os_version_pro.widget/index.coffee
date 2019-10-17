@@ -9,7 +9,7 @@
 theme		= 'dark'													#												
 #																		#
 # Show or hide the version build information in the widget				#
-showBuild	= 'false'													#
+showBuild	= 'true'													#
 #																		#
 # Position the widget on the screen										#
 pos_top		= '10px'													#
@@ -52,7 +52,7 @@ command: "system_profiler SPSoftwareDataType | awk '{ if((/System Version/) && (
 refreshFrequency: 86400000
 
 style: """
-  top:	480px
+  top:	696px
   left: 10px
   font-family: Avenir Next
   color: #{uptimeColor}
@@ -119,13 +119,13 @@ update: (output,domEl) ->
   div			= $(domEl)
   
   switch
-    when osVersion.substr(0,5) == "10.10" then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/yosemite.png") && (osRelease = ' Yosemite')
-    when osVersion.substr(0,5) == "10.11" then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/el_capitan.png") && (osRelease = ' El Capitan')
-    when osVersion.substr(0,5) == "10.12" then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/sierra.png") && (osRelease = ' Sierra')
-    when osVersion.substr(0,5) == "10.13" then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/high_sierra.png") && (osRelease = ' High Sierra')
-    when ((osVersion.substr(0,5) == "10.14") && (theme == 'dark')) then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/mojave_dark.png") && (osRelease = ' Mojave')
-    when osVersion.substr(0,5) == "10.14" then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/mojave.png") && (osRelease = ' Mojave')
-    else document.getElementById("osIcon").src = "os_version_pro.widget/icons/mac_os.png"
+    when osVersion.substr(0,5) == "10.10" then (document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/yosemite.png") && (osRelease = ' Yosemite')
+    when osVersion.substr(0,5) == "10.11" then (document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/el_capitan.png") && (osRelease = ' El Capitan')
+    when osVersion.substr(0,5) == "10.12" then (document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/sierra.png") && (osRelease = ' Sierra')
+    when osVersion.substr(0,5) == "10.13" then (document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/high_sierra.png") && (osRelease = ' High Sierra')
+    when ((osVersion.substr(0,5) == "10.14") && (theme == 'dark')) then (document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/mojave_dark.png") && (osRelease = ' Mojave')
+    when osVersion.substr(0,5) == "10.14" then (document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/mojave.png") && (osRelease = ' Mojave')
+    else document.getElementById("osIcon").src = "TheOneWidget.widget/os_version_pro.widget/icons/mac_os.png"
 
   if (osName == 'OSX')
     osName = osName.substr(0,2) + " " + osName.substr(2,1)

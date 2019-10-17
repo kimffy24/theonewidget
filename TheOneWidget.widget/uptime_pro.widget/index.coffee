@@ -8,11 +8,11 @@
 # THEME OPTIONS: mono, paper, color or dark	(default is color)			#
 # STYEL OPTIONS: min or full											#
 theme		= 'dark'													#
-style		= 'full'													#
+style		= 'min'													#
 #																		#
 # POSITION WIDGET ON SCREEN												#
-pos_top		= '1300px'													#
-pos_left	= '15px'													#
+pos_top		= '722px'													#
+pos_left	= '258px'													#
 #																		#
 #-----------------------------------------------------------------------#
 
@@ -23,7 +23,7 @@ if theme == 'mono' || theme == 'dark'
   lineColor		= 'WHITE'
   bkground		= 'rgba(#000, 0.0)'
   opacityLevel	= '0.6'
-  displayIcon		= "uptime_pro.widget/white_clock.png"
+  displayIcon		= "TheOneWidget.widget/uptime_pro.widget/white_clock.png"
 
 else if theme == 'paper'
   labelColor	= 'WHITE' 
@@ -32,7 +32,7 @@ else if theme == 'paper'
   lineColor		= 'WHITE'
   bkground		= 'rgba(#fff, 1)'
   opacityLevel	= '0.8'
-  displayIcon	= "uptime_pro.widget/black_clock.png"
+  displayIcon	= "TheOneWidget.widget/uptime_pro.widget/black_clock.png"
 
 else
   labelColor	= 'WHITE' 
@@ -41,7 +41,7 @@ else
   lineColor		= '#00BFFF'	  # Blue
   bkground		= 'rgba(#000, 0.5)'
   opacityLevel	= '1'
-  displayIcon	= "uptime_pro.widget/blue_clock.png"
+  displayIcon	= "TheOneWidget.widget/uptime_pro.widget/blue_clock.png"
   
  if theme == 'dark'
    labelColor	= 'WHITE' 
@@ -66,8 +66,8 @@ command: "uptime | awk '{ if ((/day/ && /hr/) || (/day/ && /min/) || (/day/ && /
 refreshFrequency: 60000
 
 style: """
-  top:	825px
-  left:	10px
+  top: #{pos_top}
+  left:	#{pos_left}
   font-family: Helvetica Neue
   color: #{uptimeColor}
 

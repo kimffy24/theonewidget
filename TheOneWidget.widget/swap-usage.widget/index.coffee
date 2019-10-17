@@ -3,7 +3,7 @@ command: "sysctl -n vm.swapusage | awk '{printf \"%s,%s\\n%s,%s\\n%s,%s\", $1,$3
 refreshFrequency: 5000
 
 style: """
-  top: 770px
+  top: 464px
   left: 10px
   color: #fff
   font-family: Helvetica Neue
